@@ -1,3 +1,4 @@
+// prompt 1: print out the menu free of bugs 
 const coffee_data = require('./coffee_data');
 
 //prompt 2: print out an array of the drinks off of the menu
@@ -5,10 +6,11 @@ const coffee_data = require('./coffee_data');
 console.table(coffee_data);
 
 //prompt 3: print an array of drinks that cost 5 and under.
+//loop through the coffee data and add the drinks that cost 5 and under to the coffeeUnder5 array.
 
 let coffeeUnder5 = [];
 
-//loop through the coffee data and add the drinks that cost 5 and under to the coffeeUnder5 array.
+
 
 for (let i = 0; i < coffee_data.length; i++) {
     if (coffee_data[i].price <= 5) {
@@ -19,10 +21,11 @@ for (let i = 0; i < coffee_data.length; i++) {
 console.table(coffeeUnder5);
 
 //prompt 4: print an array of drinks that are priced at an even number.
+//loop through the coffee data and add the even numbered drinks to the coffeeEven array.
 
 let coffeeEven = [];
 
-//loop through the coffee data and add the even numbered drinks to the coffeeEven array.
+
 
 for (let i = 0; i < coffee_data.length; i++) {
     if (coffee_data[i].price % 2 === 0) {
@@ -33,10 +36,11 @@ for (let i = 0; i < coffee_data.length; i++) {
 console.table(coffeeEven);
 
 //prompt 5: print the total cost of all the drinks on the menu.
+//loop through the coffee data and add the price to the totalCost array.
 
 let totalCost = 0;
 
-//loop through the coffee data and add the price to the totalCost array.
+
 
 for (let i = 0; i < coffee_data.length; i++) {
     totalCost += coffee_data[i].price;
@@ -45,10 +49,11 @@ for (let i = 0; i < coffee_data.length; i++) {
 console.log(" The total cost of all the drinks on the menu is $" + totalCost);
 
 //prompt 6: print an array of drinks that are seasonal on the menu.
+//loop through the coffee data and add the seasonal drinks to the seasonal array if the seasonal value is true.
 
 let seasonal = [];
 
-//loop through the coffee data and add the seasonal drinks to the seasonal array if the seasonal value is true.
+
 
 for (let i = 0; i < coffee_data.length; i++) {
     if (coffee_data[i].seasonal === true) {
@@ -59,11 +64,12 @@ for (let i = 0; i < coffee_data.length; i++) {
 console.table(seasonal);
 
 //prompt 7: print an array of drinks that are seasonal add the string "with imported beans" after the item name.
+// loop through the coffee data and add imported beans to the importedBeans array if the seasonal is true.
 
 
 let importedBeans = [];
 
-// loop through the coffee data and add imported beans to the importedBeans array if the seasonal is true.
+
 
 for (let i = 0; i < coffee_data.length; i++) {
     if (coffee_data[i].seasonal === true) {
